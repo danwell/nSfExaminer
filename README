@@ -1,0 +1,41 @@
+Examines and outputs party data for Shining Force from a Gens/Kega
+savestate.
+
+To compile:
+	gcc sfexaminer.c -o sfexaminer
+
+To run:
+	./sfexaminer [FILE]
+
+where FILE is a Gens/Kega savestate. This can be used with other
+emulators; adjust the FIRSTPARTYMEMBER macro so that it points to the
+start of Max's data.
+
+When run, the tool will output data for all party members in the
+following format:
+
+Name: Max
+Class:    16        Level:    10
+Attack:   28        Defence:  41
+Agility:  48        Move:      6
+Crit?:     8        Exp:      48
+HP:       51/ 51    MP:       11/ 11
+??:   0
+??:   0
+Item 1:    1
+Item 2:    1
+Item 3:  166
+Item 4:    8
+Magic 1:  13
+Magic 2: 255
+Magic 3: 255
+Magic 4: 255
+??:   0
+??:   0
+??:   0
+??:   0
+??:   0
+??:   0
+
+Please note that characters appear to have multiple padding bytes of
+unknown use.
