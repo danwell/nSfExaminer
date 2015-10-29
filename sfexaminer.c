@@ -22,6 +22,8 @@
 #include <errno.h>
 #include <string.h>
 
+#define FIRSTPARTYMEMBER 0xC10A
+
 #define CLASS_HERO 16
 #define CLASS_WIZD 20
 #define CLASS_VICR 22
@@ -261,7 +263,7 @@ int main(int argc, char *argv[]) {
 
         struct partymember* pm = CreatePartyMember();
 
-        fseek(file, 0xC10A, 0);
+        fseek(file, FIRSTPARTYMEMBER, 0);
         for(int i = 0; i < MAXPARTY; i++) {
                 if(i != 0)
                         fprintf(stdout, "  ------\n");
